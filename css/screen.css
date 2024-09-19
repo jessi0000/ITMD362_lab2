@@ -1,7 +1,64 @@
-/* Mobile first styles */
-input, label {
-    display: block;
-    margin: 10px;
+/* Basic styling */
+body {
+    background-color: #e0e5ec; /* Light grey-blue background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 8px 8px 15px #a7b1c2, -8px -8px 15px #ffffff; /* Neumorphism effect */
+    width: 100%;
+    max-width: 450px;
+}
+
+label {
+    margin-bottom: 10px;
+    color: #6c7a89;
+    font-weight: 600;
+}
+
+input, button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 8px;
+    background: #e0e5ec;
+    box-shadow: inset 8px 8px 8px #a7b1c2, inset -8px -8px 8px #ffffff; /* Neumorphic inset effect */
+    outline: none;
+    font-size: 16px;
+}
+
+input:focus, button:focus {
+    box-shadow: inset 4px 4px 6px #a7b1c2, inset -4px -4px 6px #ffffff;
+}
+
+button {
+    color: #ffffff;
+    background-color: #667eea; /* Vivid blue gradient start */
+    background-image: linear-gradient(315deg, #667eea 0%, #764ba2 74%); /* Vivid blue to purple gradient */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-image: linear-gradient(315deg, #667eea 0%, #764ba2 74%);
+    transform: translateY(-2px);
+}
+
+button:active {
+    box-shadow: inset 2px 2px 2px #a7b1c2, inset -2px -2px 2px #ffffff;
+    transform: translateY(2px);
 }
 
 /* Desktop styles */
@@ -13,11 +70,10 @@ input, label {
     }
 
     label {
-        grid-column: 1;
+        grid-column: 1 / 2;
     }
 
     input, button {
-        grid-column: 2;
+        grid-column: 2 / 3;
     }
 }
-
